@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Projeto de um site responsivo para praticar os conhecimentos aprendidos no curso de CSS com SASS">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Le Scone</title>
+</head>
+
+<body>
+  <main class="main container">
+    <section class="intro" aria-label="Introdução">
+      <h1>
+        <img src="img/lescone.png" alt="Le Scone" width="201" height="186">
+      </h1>
+      <div class="info">
+        <div class="horario">
+          <span>De Seg. à Sab.</span>
+          <span>das 07:00 às 18:00</span>
+        </div>
+        <div class="local">
+          <span>Praia de Botafogo, 300</span>
+          <span>Rio de Janeiro - RJ</span>
+        </div>
+        <a href="tel:+552124123333">+55 021 2412-3333</a>
+      </div>
+      <img class="foto" src="img/foto.jpg" alt="Foto da cozinha" width="570" height="700">
+      <span class="icon">////</span>
+    </section>
+    <section class="menu" aria-label="Menu">
+      <h2 class="subtitle">Menu</h2>
+      <h3>Entradas</h3>
+      <ul class="entradas">
+        <li>
+          <span class="preco"><sup>R$</sup>1,70</span>
+          <span>Ovos Mexidos</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>1,50</span>
+          <span>Scones de Frutas</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>2,00</span>
+          <span>Joelho de Queijo</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>2,50</span>
+          <span>Coxinha de Frango</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>1,50</span>
+          <span>Presunto Cozido</span>
+        </li>
+      </ul>
+      <img src="img/prato-1.jpg" alt="Prato 1" width="180" height="180">
+      <h3>Pratos Principais</h3>
+      <ul class="principais">
+        <li>
+          <span class="preco"><sup>R$</sup>10,70</span>
+          <span>Risoto de Camarão</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>12,50</span>
+          <span>Penne com Queijo</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>20,00</span>
+          <span>Feijoada</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>11,50</span>
+          <span>Costela ao Molho</span>
+        </li>
+        <li>
+          <span class="preco"><sup>R$</sup>14,50</span>
+          <span>Medalhão de Frango</span>
+        </li>
+      </ul>
+      <img src="img/prato-2.jpg" alt="Prato 2" width="180" height="180">
+    </section>
+    <section class="contato" aria-label="Contato">
+      <h2 class="subtitle">Contato</h2>
+      <form action="#" method="get" class="form">
+        <label>
+          Nome
+          <input type="text" name="name">
+        </label>
+        <div class="double-fields">
+          <label>
+            E-mail
+            <input type="email" name="email">
+          </label>
+          <label>
+            Telefone
+            <input type="number" name="phone">
+          </label>
+        </div>
+        <label>
+          Mensagem
+          <textarea name="msg" rows="5"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+      <img src="img/map.jpg" alt="Mapa do restaurante" width="540" height="180">
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>Le Scone © 1989 - 2016. Alguns direitos reservados</p>
+      <img src="img/lescone-icone.png" alt="Ícone da Le scone" width="45" height="26">
+    </div>
+  </footer>
+</body>
+
+</html>
