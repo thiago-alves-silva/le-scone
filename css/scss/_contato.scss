@@ -1,0 +1,74 @@
+@import "miscellaneous";
+
+%form-style {
+  background: #edece4;
+  border: 2px solid #988c78;
+  outline: 0;
+  transition: background 0.3s;
+  &:hover,
+  &:focus {
+    background: lighten(#edece4, $amount: 5);
+  }
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  padding-bottom: 60px;
+
+  .form {
+    font-size: pxToRem(18);
+    margin-bottom: 60px;
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 25px;
+
+      label {
+        flex: 1 1 170px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+
+      input,
+      textarea {
+        @extend %form-style;
+        color: inherit;
+        box-sizing: border-box;
+        padding: 8px;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+
+    [type="submit"] {
+      @extend %form-style;
+      color: #988c78;
+      text-transform: uppercase;
+      cursor: pointer;
+      height: 40px;
+      width: 190px;
+    }
+  }
+
+  img {
+    border: 10px solid #cbc6b9;
+    width: 100%;
+  }
+}
+
+@include mq(700px) {
+  .contato {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .form {
+      margin-bottom: 20px;
+    }
+  }
+}

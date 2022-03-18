@@ -1,0 +1,30 @@
+@import "miscellaneous";
+
+$footer: #2a2426;
+
+.footer {
+  background: $footer;
+  box-shadow: 10px 0 0 $footer, -10px 0 0 $footer;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+
+    p {
+      color: #edece4;
+      font-size: pxToRem(18);
+      text-align: center;
+    }
+  }
+}
+
+@include mq(600px) {
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+}

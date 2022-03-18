@@ -1,0 +1,9 @@
+@function pxToRem($px) {
+  @return $px / 16 * 1rem;
+}
+
+@mixin mq($maxWidth) {
+  @media (max-width: $maxWidth) {
+    @content;
+  }
+}
