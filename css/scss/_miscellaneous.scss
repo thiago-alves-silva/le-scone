@@ -1,9 +1,0 @@
-@function pxToRem($px) {
-  @return calc($px / 16 * 1rem);
-}
-
-@mixin mq($maxWidth) {
-  @media (max-width: $maxWidth) {
-    @content;
-  }
-}
