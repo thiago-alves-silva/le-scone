@@ -14,9 +14,14 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: #edece4;
   color: #2a2426;
+  font-family: "PT Mono", monospace;
   border: 10px solid #cbc6b9;
   border-bottom-width: 0;
 }
@@ -54,6 +59,7 @@ body {
 }
 .intro .info {
   font-size: 1.125rem;
+  padding-right: 20px;
   max-width: 300px;
 }
 .intro .info span {
@@ -82,14 +88,10 @@ body {
   padding: 20px 0 15px;
 }
 .intro .info a {
-  color: #bab2a3;
-  text-decoration: none;
+  color: #988c78;
 }
 .intro .icon {
-  font-size: 13.75rem;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  line-height: 1;
+  padding-right: 20px;
 }
 .intro .foto {
   grid-area: 1/2/4;
@@ -123,14 +125,13 @@ body {
 .menu ul {
   grid-column: 2/span 2;
   font-size: 1.125rem;
-  font-weight: 700;
 }
 .menu ul li {
   display: grid;
   grid-template-columns: 80px 1fr;
 }
 .menu ul .preco {
-  color: #988c77;
+  color: #988c78;
 }
 .menu ul .preco sup {
   font-size: 0.625rem;
@@ -151,7 +152,7 @@ body {
     grid-column: 2/-1;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .menu {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -167,17 +168,11 @@ body {
     margin-top: 20px;
   }
 }
-.contato .form [type=submit], .contato .form label input,
+.contato .form .send-container [type=submit], .contato .form label input,
 .contato .form label textarea {
   background: #edece4;
   border: 2px solid #988c78;
   outline: 0;
-  transition: background 0.3s;
-}
-.contato .form [type=submit]:hover, .contato .form label input:hover,
-.contato .form label textarea:hover, .contato .form [type=submit]:focus, .contato .form label input:focus,
-.contato .form label textarea:focus {
-  background: #f7f7f3;
 }
 
 .contato {
@@ -189,12 +184,12 @@ body {
   font-size: 1.125rem;
   margin-bottom: 60px;
 }
-.contato .form div {
+.contato .form .double-fields {
   display: flex;
   flex-wrap: wrap;
   gap: 0 25px;
 }
-.contato .form div label {
+.contato .form .double-fields label {
   flex: 1 1 170px;
 }
 .contato .form label {
@@ -205,17 +200,50 @@ body {
 .contato .form label input,
 .contato .form label textarea {
   color: inherit;
+  font-size: 1rem;
   box-sizing: border-box;
+  transition: background 0.3s;
   padding: 8px;
   margin-top: 10px;
   width: 100%;
 }
-.contato .form [type=submit] {
+.contato .form label input:hover, .contato .form label input:focus,
+.contato .form label textarea:hover,
+.contato .form label textarea:focus {
+  background: #f7f7f3;
+}
+.contato .form .send-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 0 20px;
+}
+.contato .form .send-container [type=submit] {
+  grid-row: span 2;
   color: #988c78;
+  font-family: "PT Mono", monospace;
+  font-size: 1.125rem;
   text-transform: uppercase;
+  box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 #988c78;
   cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin-bottom: 15px;
   height: 40px;
   width: 190px;
+}
+.contato .form .send-container [type=submit]:hover, .contato .form .send-container [type=submit]:focus {
+  background: #f7f7f3;
+  box-shadow: 3px 3px 0 -2px #cbc6b9, 3px 3px 0 #988c78;
+}
+.contato .form .send-container a {
+  display: flex;
+  justify-content: space-between;
+  color: #988c78;
+  white-space: nowrap;
+  padding: 5px 0;
+  width: 270px;
+}
+.contato .form .send-container a::after {
+  content: "////";
 }
 .contato img {
   border: 10px solid #cbc6b9;
@@ -229,6 +257,12 @@ body {
   }
   .contato .form {
     margin-bottom: 20px;
+  }
+  .contato .form .send-container a {
+    width: max-content;
+  }
+  .contato .form .send-container a::after {
+    content: "";
   }
 }
 .footer {

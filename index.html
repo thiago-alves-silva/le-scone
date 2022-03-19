@@ -8,6 +8,10 @@
         content="Projeto de um site responsivo para praticar os conhecimentos aprendidos no curso de CSS com SASS">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="preload" as="style"
+        onload="this.rel='stylesheet'">
   <title>Le Scone</title>
 </head>
 
@@ -29,7 +33,7 @@
         <a href="tel:+552124123333">+55 021 2412-3333</a>
       </div>
       <img class="foto" src="img/foto.jpg" alt="Foto da cozinha" width="570" height="700">
-      <span class="icon">////</span>
+      <img class="icon" src="img/barras.svg" alt="" width="330" height="127">
     </section>
     <section class="menu" aria-label="Menu">
       <h2 class="subtitle">Menu</h2>
@@ -103,7 +107,11 @@
           Mensagem
           <textarea name="msg" rows="5"></textarea>
         </label>
-        <button type="submit">Enviar</button>
+        <div class="send-container">
+          <button type="submit">Enviar</button>
+          <a href="mailto:contato@lescone.com">contato@lescone.com</a>
+          <a href="tel:+5502124123333">+55 021 2412-3333</a>
+        </div>
       </form>
       <img src="img/map.jpg" alt="Mapa do restaurante" width="540" height="180">
     </section>

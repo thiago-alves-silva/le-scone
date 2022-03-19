@@ -1,14 +1,7 @@
-@import "miscellaneous";
-
 %form-style {
-  background: #edece4;
-  border: 2px solid #988c78;
+  background: $background;
+  border: 2px solid $action;
   outline: 0;
-  transition: background 0.3s;
-  &:hover,
-  &:focus {
-    background: lighten(#edece4, $amount: 5);
-  }
 }
 
 .contato {
@@ -20,7 +13,7 @@
     font-size: pxToRem(18);
     margin-bottom: 60px;
 
-    div {
+    .double-fields {
       display: flex;
       flex-wrap: wrap;
       gap: 0 25px;
@@ -39,25 +32,60 @@
       textarea {
         @extend %form-style;
         color: inherit;
+        font-size: 1rem;
         box-sizing: border-box;
+        transition: background 0.3s;
         padding: 8px;
         margin-top: 10px;
         width: 100%;
+        &:hover,
+        &:focus {
+          background: lighten($background, $amount: 5);
+        }
       }
     }
 
-    [type="submit"] {
-      @extend %form-style;
-      color: #988c78;
-      text-transform: uppercase;
-      cursor: pointer;
-      height: 40px;
-      width: 190px;
+    .send-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 0 20px;
+
+      [type="submit"] {
+        @extend %form-style;
+        grid-row: span 2;
+        color: $action;
+        font-family: $font-family;
+        font-size: pxToRem(18);
+        text-transform: uppercase;
+        box-shadow: 5px 5px 0 -2px $border, 5px 5px 0 $action;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 190px;
+        &:hover,
+        &:focus {
+          background: lighten($background, $amount: 5);
+          box-shadow: 3px 3px 0 -2px $border, 3px 3px 0 $action;
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        color: $action;
+        white-space: nowrap;
+        padding: 5px 0;
+        width: 270px;
+        &::after {
+          content: "////";
+        }
+      }
     }
   }
 
   img {
-    border: 10px solid #cbc6b9;
+    border: 10px solid $border;
     width: 100%;
   }
 }
@@ -69,6 +97,13 @@
 
     .form {
       margin-bottom: 20px;
+
+      .send-container a {
+        width: max-content;
+        &::after {
+          content: "";
+        }
+      }
     }
   }
 }

@@ -1,10 +1,6 @@
-@import "miscellaneous";
-
-$footer: #2a2426;
-
 .footer {
-  background: $footer;
-  box-shadow: 10px 0 0 $footer, -10px 0 0 $footer;
+  background: $font-color;
+  box-shadow: 10px 0 0 $font-color, -10px 0 0 $font-color;
   .container {
     display: flex;
     justify-content: space-between;
@@ -12,7 +8,7 @@ $footer: #2a2426;
     min-height: 100px;
 
     p {
-      color: #edece4;
+      color: $background;
       font-size: pxToRem(18);
       text-align: center;
     }

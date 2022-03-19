@@ -1,5 +1,3 @@
-@import "miscellaneous";
-
 .menu {
   display: grid;
   grid-template-columns: 4fr 80px 4fr 3fr;
@@ -14,7 +12,6 @@
   ul {
     grid-column: 2 / span 2;
     font-size: pxToRem(18);
-    font-weight: 700;
 
     li {
       display: grid;
@@ -22,7 +19,7 @@
     }
 
     .preco {
-      color: #988c77;
+      color: $action;
 
       sup {
         font-size: pxToRem(10);
@@ -35,7 +32,7 @@
   }
 
   img {
-    border: 10px solid #cbc6b9;
+    border: 10px solid $border;
     border-radius: 50%;
   }
 }
@@ -50,7 +47,7 @@
   }
 }
 
-@include mq(500px) {
+@include mq(600px) {
   .menu {
     grid-template-columns: 1fr;
     gap: 20px;
